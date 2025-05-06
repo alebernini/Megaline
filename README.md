@@ -94,6 +94,13 @@ Para cada usuário, foi calculada a **receita mensal**, somando:
 
 ## ✅ Status do Projeto
 
-🟢 **Concluído** – A análise foi realizada com sucesso, e as conclusões podem orientar decisões estratégicas sobre publicidade e alocação de recursos se encontram no documento do projeto.
+🟢 **Concluído** – A análise foi realizada com sucesso, e as conclusões podem orientar decisões estratégicas sobre publicidade e alocação de recursos. 
+Na análise dos dados comparando os dois planos Ultimate e Surf foi identificado que: 
+• A quantidade de chamadas é maior para o plano Surf em todos os meses do ano, sendo a maior em janeiro. Nos últimos quatro meses do anos, essa diferença se torna menor; 
+• A quantidade mínima que os usuários necessitam é bem maior em Surf do que em Ultimate;
+• A média de duração de chamadas está entre 400-500;
+• A duração das chamadas em Ultimate é maior do que em Surf no primeiro trimestre;
+• O volume de tráfico é maior no último trimestre;
+• A hipótese nula de que as receitas dos dois planos são iguais foi rejeitada.
 
 
