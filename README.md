@@ -1,86 +1,107 @@
-# Megaline – Análise de Planos de Telefonia Pré-Pagos
+# Megaline – Prepaid Mobile Plan Analysis
 
-Este projeto tem como objetivo realizar uma análise de dados da empresa de telecomunicações **Megaline**, que oferece dois planos pré-pagos: **Surf** e **Ultimate**. A equipe comercial busca entender qual dos planos gera mais receita para otimizar o orçamento de publicidade.
+This project analyzes data for the telecommunications company Megaline, which offers two prepaid plans: Surf and Ultimate. The commercial team seeks to understand which plan generates more revenue to optimize the advertising budget.
 
-## 🧾 Descrição do Projeto
+🧾 Project Description
 
-Analisamos o comportamento de **500 clientes** com base em dados de chamadas, mensagens e uso de internet ao longo de 2018. A análise envolve:
+We analyzed the behavior of 500 customers based on call, text, and internet usage data throughout 2018. The analysis includes:
 
-- Limpeza e preparação dos dados;
-- Cálculo da receita mensal por usuário;
-- Estatísticas descritivas do uso dos planos;
-- Visualizações para compreensão do comportamento dos usuários;
-- Testes estatísticos para validar hipóteses sobre a receita dos planos e regiões.
+Data cleaning and preparation
 
-## 💡 Objetivo
+Monthly revenue calculation per user
 
-Determinar, com base em evidências estatísticas, **qual plano (Surf ou Ultimate) gera mais receita em média**, além de explorar padrões de uso entre diferentes regiões.
+Descriptive statistics of plan usage
 
-## 📦 Dados Utilizados
+Visualizations to understand user behavior
 
-Os dados estão organizados em cinco arquivos CSV:
+Statistical tests to validate hypotheses about revenue by plan and region
 
-- `megaline_users.csv`: informações cadastrais dos usuários
-- `megaline_calls.csv`: dados sobre chamadas realizadas
-- `megaline_messages.csv`: dados sobre mensagens enviadas
-- `megaline_internet.csv`: dados de uso da internet
-- `megaline_plans.csv`: detalhes dos planos Surf e Ultimate
+💡 Objective
 
-## 📝 Descrição dos Planos
+Determine, based on statistical evidence, which plan (Surf or Ultimate) generates more average revenue, and explore usage patterns across different regions.
 
-### Surf
+📦 Data Used
 
-- 💵 Preço mensal: $20  
-- Inclui: 500 min, 50 SMS, 15 GB  
-- Excedente:  
-  - Minuto: $0.03  
-  - SMS: $0.03  
-  - GB adicional: $10  
+The data is organized in five CSV files:
 
-### Ultimate
+megaline_users.csv: user registration data
 
-- 💵 Preço mensal: $70  
-- Inclui: 3.000 min, 1.000 SMS, 30 GB  
-- Excedente:  
-  - Minuto: $0.01  
-  - SMS: $0.01  
-  - GB adicional: $7  
+megaline_calls.csv: information on calls made
 
-> Obs: chamadas são arredondadas para cima a cada minuto. O tráfego web mensal é arredondado para cima em GB.
+megaline_messages.csv: information on messages sent
 
-## ⚙️ Etapas do Projeto
+megaline_internet.csv: internet usage data
 
-### 1. Preparação dos Dados
+megaline_plans.csv: details of Surf and Ultimate plans
 
-- Conversão de tipos de dados
-- Tratamento de valores ausentes e inconsistências
-- Agregação mensal do uso por usuário
+📝 Plan Descriptions
 
-### 2. Cálculo da Receita
+Surf
 
-Para cada usuário, foi calculada a **receita mensal**, somando:
-- Cobranças por uso excedente (minutos, mensagens, dados)
-- Preço fixo mensal do plano
+💵 Monthly price: $20
 
-### 3. Análise Exploratória
+Includes: 500 min, 50 SMS, 15 GB
 
-- Estatísticas descritivas (média, desvio padrão, variância)
-- Histogramas de uso e receita
-- Comparação entre planos e regiões
+Overage charges:
 
-### 4. Teste de Hipóteses
+Per minute: $0.03
 
-- **Hipótese 1:** A receita média entre usuários dos planos Ultimate e Surf é diferente.
-- **Hipótese 2:** A receita média de usuários da área NY-NJ é diferente da dos demais.
+Per SMS: $0.03
 
-## 📊 Principais Ferramentas
+Additional GB: $10
 
-- `pandas`, `numpy` – manipulação de dados
-- `matplotlib`, `seaborn` – visualizações
-- `scipy.stats` – testes estatísticos
+Ultimate
 
-## 📁 Estrutura do Projeto
+💵 Monthly price: $70
 
+Includes: 3,000 min, 1,000 SMS, 30 GB
+
+Overage charges:
+
+Per minute: $0.01
+
+Per SMS: $0.01
+
+Additional GB: $7
+
+Note: Calls are rounded up to the nearest minute. Monthly web traffic is rounded up to the nearest GB.
+
+⚙️ Project Steps
+
+1. Data Preparation
+Data type conversion
+
+Handling missing values and inconsistencies
+
+Monthly usage aggregation per user
+
+2. Revenue Calculation
+For each user, monthly revenue was calculated by summing:
+
+Overage charges (minutes, messages, data)
+
+Fixed monthly plan fee
+
+3. Exploratory Analysis
+Descriptive statistics (mean, standard deviation, variance)
+
+Usage and revenue histograms
+
+Comparison between plans and regions
+
+4. Hypothesis Testing
+Hypothesis 1: The average revenue of Ultimate and Surf plan users is different.
+
+Hypothesis 2: The average revenue of users in the NY-NJ area is different from that of other regions.
+
+📊 Main Tools
+pandas, numpy – data manipulation
+
+matplotlib, seaborn – visualizations
+
+scipy.stats – statistical tests
+
+📁 Project Structure
 📦 Megaline
 ├── 📁 data/
 │ ├── megaline_calls.csv
@@ -91,16 +112,21 @@ Para cada usuário, foi calculada a **receita mensal**, somando:
 ├── 📄 README.md
 └── 📄 megaline_analysis.ipynb
 
+✅ Project Status
 
-## ✅ Status do Projeto
+🟢 Completed – The analysis was successfully conducted, and the findings can help guide strategic decisions regarding advertising and resource allocation.
 
-🟢 **Concluído** – A análise foi realizada com sucesso, e as conclusões podem orientar decisões estratégicas sobre publicidade e alocação de recursos. 
-Na análise dos dados comparando os dois planos Ultimate e Surf foi identificado que: 
-• A quantidade de chamadas é maior para o plano Surf em todos os meses do ano, sendo a maior em janeiro. Nos últimos quatro meses do anos, essa diferença se torna menor; 
-• A quantidade mínima que os usuários necessitam é bem maior em Surf do que em Ultimate;
-• A média de duração de chamadas está entre 400-500;
-• A duração das chamadas em Ultimate é maior do que em Surf no primeiro trimestre;
-• O volume de tráfico é maior no último trimestre;
-• A hipótese nula de que as receitas dos dois planos são iguais foi rejeitada.
+In comparing the two plans, Ultimate and Surf, the following insights were observed:
 
+The number of calls is consistently higher for Surf users throughout the year, especially in January. In the last four months, this difference narrows.
+
+The minimum usage demand is significantly higher for Surf users.
+
+The average call duration ranges between 400–500 minutes.
+
+Call durations for Ultimate users are longer than Surf users in the first quarter.
+
+Data traffic volume increases in the last quarter.
+
+The null hypothesis that both plans generate equal revenue was rejected.
 
